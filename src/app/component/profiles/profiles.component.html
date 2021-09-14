@@ -1,0 +1,16 @@
+
+<app-form  (newUser)="onNewUser($event)"></app-form>
+
+
+<div *ngFor="let item of items;" class="card mx-auto mt-4 mb-4 " style="width: 20rem;">
+    
+    <div class="card-body ">
+     
+        <div class="">
+            <p>Name : {{item.name}}</p>
+            <p>Adress : {{item.adr}}</p>
+           <!--<button (click)="onDelete(item)" class="btn btn-danger">dealte</button>--> 
+           <app-delete (del)="onDelete(item)"></app-delete>
+        
+    </div>
+</div>
